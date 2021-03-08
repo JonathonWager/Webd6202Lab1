@@ -1,7 +1,7 @@
 <!--
   Created by: Jonathon Wager and Aaron LeBlanc
-  File Name: human_resource.html
-  File Description: This is the human resources page for our website
+  File Name: projects.html
+  File Description: This is the projects page for our website showing some of our favorite projects
   Date completed: 2021/02/05
 -->
 <!DOCTYPE html>
@@ -9,7 +9,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HumanResource</title>
+    <!-- title output for "Projects"-->
+    <title>Projects</title>
     <!-- CSS Section -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
@@ -24,10 +25,9 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <!-- Collapsable nav bar inside div tag-->
+              <!-- Link to index.html-->
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <!-- Link to index.html-->
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home fa-lg"></i> Home</a>
                   </li> 
@@ -50,7 +50,7 @@
                     <a class="nav-link" aria-current="page" href="about.html"><i class="fas fa-info fa-lg"></i> About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="login.html"><i class="fas fa-sign-in-alt"></i>Login</a>
+                    <a class="nav-link" aria-current="page" href="login.html"><i class="fas fa-info fa-lg"></i> Login</a>
                   </li>
                 </ul>
               </div>
@@ -59,11 +59,21 @@
     </header>
 
     <!-- Main Content -->
-    <main>
-    <h1>Human Resource</h1>
-      <div id="HRcontent"> </div>
-      <img src="/Pictures/Human Resources Page/HRPicture.png" width = 900x; alt="Deck of Cards">
-  </main>
+    <main class="container">
+      <h1>Our Projects</h1>
+      <!-- Displaying deck of cards project header, a picture of the project and injecting description in the div tag-->
+      <h2>Deck of Cards Project</h2>
+      <div id="DeckOfCardsContent"> </div>
+      <img src="/Pictures/Projects Page/DeckOfCardsLab.PNG" width = 600px; alt="Deck of Cards">
+      <!-- Displaying calculator project header, a picture of the project and injecting description in the div tag-->
+      <h2>GPA Calculator Project</h2>
+      <div id="GPACalculatorContent"> </div>
+      <img src="/Pictures/Projects Page/GPACalculator.PNG" width = 400px; alt="GPA Calculator">
+      <!-- Displaying deck of website project header, a picture of the project and injecting description in the div tag-->
+      <h2>Website Project</h2>
+      <div id="WebsiteContent"> </div>
+      <img src="/Pictures/Projects Page/Website.jpeg" alt="Website Image">
+    </main>
 
     <!-- Main Footer -->
     <footer>

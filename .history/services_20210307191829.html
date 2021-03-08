@@ -1,7 +1,7 @@
 <!--
   Created by: Jonathon Wager and Aaron LeBlanc
-  File Name: human_resource.html
-  File Description: This is the human resources page for our website
+  File Name: services.html
+  File Description: This is the service page for our website showing off the services we provide
   Date completed: 2021/02/05
 -->
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HumanResource</title>
+    <title>Services</title>
     <!-- CSS Section -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
@@ -24,10 +24,9 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <!-- Collapsable nav bar inside div tag-->
+              <!-- Link to index.html-->
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <!-- Link to index.html-->
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home fa-lg"></i> Home</a>
                   </li> 
@@ -44,13 +43,10 @@
                     <a class="nav-link" aria-current="page" href="contact.html"><i class="fas fa-phone fa-lg"></i> Contact Us</a>
                   </li>
                   <!-- This will be used to inject the username of the current person logged in-->
-                  <span id ="usernameInputID" style="color: red" class="navbar-text"> </span>
+                  <strong id ="usernameInputID" style="color: red"> </strong>
                   <!-- Link to about.html-->
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="about.html"><i class="fas fa-info fa-lg"></i> About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="login.html"><i class="fas fa-sign-in-alt"></i>Login</a>
                   </li>
                 </ul>
               </div>
@@ -59,14 +55,26 @@
     </header>
 
     <!-- Main Content -->
-    <main>
-    <h1>Human Resource</h1>
-      <div id="HRcontent"> </div>
-      <img src="/Pictures/Human Resources Page/HRPicture.png" width = 900x; alt="Deck of Cards">
-  </main>
+    <main class="container">
+      <!-- Header for our services-->
+      <h1>Our Services </h1>
+      <!-- Web design header with a stock picture and a div tag that is injected into-->
+      <h2>Web Design</h2>
+      <img src="/Pictures/Services Page/WebDesign.jpeg" width = 600px; alt="Deck of Cards">
+      <div id="WebDesignContent"> </div>
+      <!-- Database development header with a stock picture and a div tag that is injected into-->
+      <h2>Database Development</h2>
+      <img src="/Pictures/Services Page/DatabaseDevelopment.jpeg" width = 600px; alt="Deck of Cards">
+      <div id="DatabaseDevelopmentContent"> </div>
+      <!-- Custom programming header with a stock picture and a div tag that is injected into-->
+      <h2>Custom Programming</h2>
+      <img src="/Pictures/Services Page/Programming.jpeg" width = 600px; alt="Deck of Cards">
+      <div id="CustomProgrammingContent"> </div>
+    </main>
 
     <!-- Main Footer -->
     <footer>
+      
     </footer>
 
     <!-- Script Section-->

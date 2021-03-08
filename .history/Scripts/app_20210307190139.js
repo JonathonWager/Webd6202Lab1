@@ -14,7 +14,6 @@
    */
     function displayHome()
     {
-      InjectUsername();
      //Creating the first paragraph for the index page
         let paragraphOneText =
           "Welcome to Web Works, Our team at Web Works is dedicated to offering advanced web development creations that will make you stand out from the crowd.";
@@ -51,7 +50,6 @@
    */
     function displayAbout()
     {
-      InjectUsername();
       let paragraphOneText = "I'm twenty years old and I'm currently enrolled in the Computer Programmer and Analysis course at Durham College. I spent one year at Ontario Tech University doing game development before switching into my current program. I enjoy programming and design, spending time with friends and going to music festivals. In future I aspire to be a succesful software developer and be able to travel too many countries and support my family.";
 
       let projectsDiv1 = document.getElementById("AboutAaronContent");
@@ -79,7 +77,6 @@
     */
     function displayProjects()
     {
-      InjectUsername();
       let paragraphOneText = "The following project focus was on developing our skills in object-orientated programming as we were developing a program that would create card objects that could be used for a wide variety of purposed including implementing into hundreds of different card games. The project was one of our favourites because it widned our skill set and showed us even further how useful object-orientate programming can be.";
 
       let projectsDiv1 = document.getElementById("DeckOfCardsContent");
@@ -121,7 +118,6 @@
     */
     function displayServices()
     {
-      InjectUsername();
       let paragraphOneText = "We have the ability to create interactive websites that will stand out and make you look professional. We can apply custom themes to style your website as well as make it an interactive website that is effeciently navigable.";
 
       let projectsDiv1 = document.getElementById("WebDesignContent");
@@ -160,7 +156,6 @@
     */
     function displayContact()
     {
-      InjectUsername();
       //getting send button element
         let sendButton = document.getElementById("sendButton");
         //when the user clicks submit header back to home page
@@ -176,7 +171,6 @@
     */
     function displayHumanResource()
     {
-      InjectUsername();
       let paragraphOneText = "Human Resources are in charge of the employee life cycle at an organization. Responsibilities include updating employement records, transferring employees, promoting and terminating employees. At Web Works our lead Human Resources Representatives is split between Jonathon Wager and Aaron LeBlanc to satisfy the requirements of the position. Our responbilities also include but are not limited too, determining what employees can and can't do, determine the need for staff and if employees must be hired or fired, recruiting the best candidates for the positions we must fill, supervising the work of those within the company, evaluating work of employees and establishing discipline in the work place while ensure no discrimination occurs.";
 
       let projectsDiv1 = document.getElementById("HRcontent");
@@ -254,11 +248,12 @@
      {
       if(sessionStorage.getItem("user"))
       {
-        
+        console.log(sessionStorage.getItem("user"));
          // Finding the element by id and setting its content to the userName value
-        document.getElementById("usernameInputID").innerHTML = sessionStorage.getItem("userName");      
+        document.getElementById("usernameInputID").innerHTML = usersName;      
       }
-      
+          // Creating a variable names usersName that will store the value entered into the username field on login form
+          let usersName = document.getElementById("username").value;
          
          
      }
@@ -296,15 +291,18 @@
            if(success)
            {
 
-            sessionStorage.setItem("userName", username.val());
+
              // add user to session storage
              sessionStorage.setItem("user", newUser.serialize());
  
              // hide any error message
              messageArea.removeAttr("class").hide();
+
+                          // Calling inject username function
+                          InjectUsername();
  
              // redirect user to secure area - contact-list.html
-             location.href = "index.html";
+             //location.href = "index.html";
            }
            else
            {
@@ -431,6 +429,7 @@
          if(passwordCheck(password.val(), cPassword.val())){
            testCount++;
          }
+         console.log(testCount);
          if(testCount == 3){
            // calling getUserName() and getDisplayName and storing values in variables
           let userName = getUserName(firstName.val(), lastName.val());
@@ -441,7 +440,7 @@
           
           // Resetting registerForm id
           document.getElementById("registerForm").reset();
-          // log to console the registeredUser User object
+          // login to console the registeredUser User object
           console.log(registeredUser.toString());
          }    
       });

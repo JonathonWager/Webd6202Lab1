@@ -160,7 +160,6 @@
     */
     function displayContact()
     {
-      InjectUsername();
       //getting send button element
         let sendButton = document.getElementById("sendButton");
         //when the user clicks submit header back to home page
@@ -176,7 +175,6 @@
     */
     function displayHumanResource()
     {
-      InjectUsername();
       let paragraphOneText = "Human Resources are in charge of the employee life cycle at an organization. Responsibilities include updating employement records, transferring employees, promoting and terminating employees. At Web Works our lead Human Resources Representatives is split between Jonathon Wager and Aaron LeBlanc to satisfy the requirements of the position. Our responbilities also include but are not limited too, determining what employees can and can't do, determine the need for staff and if employees must be hired or fired, recruiting the best candidates for the positions we must fill, supervising the work of those within the company, evaluating work of employees and establishing discipline in the work place while ensure no discrimination occurs.";
 
       let projectsDiv1 = document.getElementById("HRcontent");
@@ -302,9 +300,12 @@
  
              // hide any error message
              messageArea.removeAttr("class").hide();
+
+                          // Calling inject username function
+                          InjectUsername();
  
              // redirect user to secure area - contact-list.html
-             location.href = "index.html";
+             //location.href = "index.html";
            }
            else
            {
@@ -431,6 +432,7 @@
          if(passwordCheck(password.val(), cPassword.val())){
            testCount++;
          }
+         console.log(testCount);
          if(testCount == 3){
            // calling getUserName() and getDisplayName and storing values in variables
           let userName = getUserName(firstName.val(), lastName.val());
@@ -441,7 +443,7 @@
           
           // Resetting registerForm id
           document.getElementById("registerForm").reset();
-          // log to console the registeredUser User object
+          // login to console the registeredUser User object
           console.log(registeredUser.toString());
          }    
       });

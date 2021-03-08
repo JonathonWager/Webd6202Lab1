@@ -431,6 +431,7 @@
          if(passwordCheck(password.val(), cPassword.val())){
            testCount++;
          }
+         console.log(testCount);
          if(testCount == 3){
            // calling getUserName() and getDisplayName and storing values in variables
           let userName = getUserName(firstName.val(), lastName.val());

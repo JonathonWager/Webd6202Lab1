@@ -302,6 +302,9 @@
  
              // hide any error message
              messageArea.removeAttr("class").hide();
+
+                          // Calling inject username function
+                          InjectUsername();
  
              // redirect user to secure area - contact-list.html
              location.href = "index.html";
@@ -431,6 +434,7 @@
          if(passwordCheck(password.val(), cPassword.val())){
            testCount++;
          }
+         console.log(testCount);
          if(testCount == 3){
            // calling getUserName() and getDisplayName and storing values in variables
           let userName = getUserName(firstName.val(), lastName.val());
@@ -441,7 +445,7 @@
           
           // Resetting registerForm id
           document.getElementById("registerForm").reset();
-          // log to console the registeredUser User object
+          // login to console the registeredUser User object
           console.log(registeredUser.toString());
          }    
       });

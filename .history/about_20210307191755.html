@@ -1,7 +1,7 @@
 <!--
   Created by: Jonathon Wager and Aaron LeBlanc
-  File Name: human_resource.html
-  File Description: This is the human resources page for our website
+  File Name: About.html
+  File Description: This is the about page for our website
   Date completed: 2021/02/05
 -->
 <!DOCTYPE html>
@@ -9,22 +9,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HumanResource</title>
+    <title>About</title>
     <!-- CSS Section -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 </head>
 <body>
-    <!-- Main Header -->
+    <!-- Main header -->
     <header>
-        <!-- Main Navigation -->
+        <!-- Main navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html">WebWorks</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <!-- Collapsable nav bar inside div tag-->
+              <!-- div tag for the navbar -->
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <!-- Link to index.html-->
@@ -44,13 +44,10 @@
                     <a class="nav-link" aria-current="page" href="contact.html"><i class="fas fa-phone fa-lg"></i> Contact Us</a>
                   </li>
                   <!-- This will be used to inject the username of the current person logged in-->
-                  <span id ="usernameInputID" style="color: red" class="navbar-text"> </span>
+                 <strong id ="usernameInputID" style="color: red"> </strong>
                   <!-- Link to about.html-->
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="about.html"><i class="fas fa-info fa-lg"></i> About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="login.html"><i class="fas fa-sign-in-alt"></i>Login</a>
                   </li>
                 </ul>
               </div>
@@ -59,11 +56,22 @@
     </header>
 
     <!-- Main Content -->
-    <main>
-    <h1>Human Resource</h1>
-      <div id="HRcontent"> </div>
-      <img src="/Pictures/Human Resources Page/HRPicture.png" width = 900x; alt="Deck of Cards">
-  </main>
+    <main class="container">
+      <!-- About us section that outputs our names, short descriptions ,pictures of us and links to our resumes-->
+      <h1>About Us</h1>
+      <h2>Aaron LeBlanc</h2>
+      <div> Link to my Resume:  <a href="url">https://docs.google.com/document/d/1sedhW3i_CLZ5nHWg8QpAri_rBYlweGHNmizz9WnBLvs/edit?usp=sharing</a></div>
+      <div id="AboutAaronContent"> </div>
+      <img src="/Pictures/About us Page/PictureOfAaron.jpg" width = 400px; alt="Deck of Cards">
+     
+      <!-- Jonathons about section-->
+      <h2>Jonathon Wager</h2>
+      <div> Link to my Resume:  <a href="url">https://docs.google.com/document/d/1-_PeKFoHjG8uEVsDyWGm8tCP1qcZLKkT5mntlrsb78w/edit?usp=sharing</a></div>
+      <div id="AboutJonathonContent"> </div>
+      <img src="/Pictures/About us Page/Jonathonpic.jpg" width = 400px; alt="Deck of Cards">
+      
+      
+    </main>
 
     <!-- Main Footer -->
     <footer>

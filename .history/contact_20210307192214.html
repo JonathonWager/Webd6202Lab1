@@ -1,7 +1,7 @@
 <!--
   Created by: Jonathon Wager and Aaron LeBlanc
-  File Name: human_resource.html
-  File Description: This is the human resources page for our website
+  File Name: contact.html
+  File Description: This is the contact page for our website
   Date completed: 2021/02/05
 -->
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HumanResource</title>
+    <title>Contact</title>
     <!-- CSS Section -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
@@ -24,7 +24,7 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <!-- Collapsable nav bar inside div tag-->
+              <!-- collapsable nav bar div tag-->
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <!-- Link to index.html-->
@@ -49,9 +49,6 @@
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="about.html"><i class="fas fa-info fa-lg"></i> About Us</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="login.html"><i class="fas fa-sign-in-alt"></i>Login</a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -59,20 +56,60 @@
     </header>
 
     <!-- Main Content -->
-    <main>
-    <h1>Human Resource</h1>
-      <div id="HRcontent"> </div>
-      <img src="/Pictures/Human Resources Page/HRPicture.png" width = 900x; alt="Deck of Cards">
-  </main>
+    <main class="container">
+      <!-- Contact us output-->
+        <h1>Contact Us</h1>
+        <div id="messageArea"></div>
+
+        <div class="row justify-content-lg-center g-3">
+          <form class="col-lg-6 col-md-10 col-sm-10">
+
+            <!-- Contact form and all of its components-->
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Full Name </span>
+              <input id="fullName" type="text" class="form-control" aria-label="Full Name" aria-describedby="Full Name Input"
+              name="fullName" required>
+            </div>
+            
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Contact Number</span>
+              <input id="contactNumber" type="tel" class="form-control" aria-label="Contact Number" aria-describedby="Contact Number Input"
+              name="contactNumber" required>
+            </div>
+
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+              <input id="emailAddress" type="email" class="form-control" aria-label="Email Address" aria-describedby="Email Address Input"
+              name="emailAddress" required>
+            </div>
+            
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Short Message </span>
+              <input id="fullName" type="text" class="form-control" aria-label="Full Name" aria-describedby="Short Message Input"
+              name="shortMessage" required>
+            </div>
+  
+            <button id="sendButton" type="submit" class="btn btn-primary"><i class="fas fa-envelope fa-lg"></i> Send</button>
+            <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fas fa-undo fa-lg"></i> Cancel</button>
+          </form>
+
+          
+        </div>
+        
+
+    </main>
 
     <!-- Main Footer -->
     <footer>
+       
     </footer>
 
     <!-- Script Section-->
     <script src="./Scripts/namespace.js"></script>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  
     <script src="./Scripts/app.js"></script>
 </body>
 </html>
